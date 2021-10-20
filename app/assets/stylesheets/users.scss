@@ -1,3 +1,69 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-wrap {
+  background-color: bisque;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-top-wrap {
+height: 48px;
+margin-bottom: 32px;
+}
+
+.form-top-text {
+  font-size: 40px;
+  text-align: center;
+}
+
+.form-item {
+  display: flex;
+  line-height: 44px;
+  background: mediumaquamarine;
+  margin-top: 24px;
+}
+
+.form-text-wrap {
+  width: 30%;
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+.form-text {
+  margin-right: 32px;
+}
+
+.required::after {
+  content: "必須";
+  color: #ffffff;
+  background: #cc0000;
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 8px;
+  margin-left: 4px;
+}
+
+.form-content {
+  width: 70%;
+}
+
+.default-info {
+  padding: 8px;
+  height: 32px;
+  width: 100%;
+}
+
+.input-birth-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-birth-wrap select {
+  width: 75px;
+  height: 45px;
+  font-size: 16px;
+  cursor: pointer;
+  padding-left: 4px;
+}
