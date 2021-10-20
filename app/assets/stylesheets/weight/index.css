@@ -4,7 +4,7 @@
 }
 
 .weight-wrapper > h1 {
-  font-size: 32px;
+  font-size: 24px;
   background-color: aqua;
 }
 
@@ -25,6 +25,7 @@ nav > ul > li > a {
   color: white;
   margin-right: 35px;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 nav > ul > li > a:hover {
