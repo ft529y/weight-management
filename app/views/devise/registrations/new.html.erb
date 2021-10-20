@@ -1,29 +1,80 @@
-<h2>Sign up</h2>
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="form-wrap">
+  <div class="form-top-wrap">
+    <h1 class="form-top-text">
+      新規登録（会員情報入力）
+    </h1>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <div class="form-item">
+    <div class="form-text-wrap">
+      <label class="form-text"><span class="required">メールアドレス</span></label>
+    </div>
+    <div class="form-content">
+      <%= f.email_field :email, class:"default-info", 
+      id:"email", placeholder:"例 :  sample@co.jp", autofocus: true  %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="form-item">
+    <div class="form-text-wrap">
+      <label class="form-text"><span class="required">パスワード</span></label>
+    </div>
+    <div class="form-content">
+      <%= f.password_field :password, class:"default-info", 
+      id:"password", placeholder:"例 :  パスワードを入力して下さい" %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="form-item">
+    <div class="form-text-wrap">
+      <label class="form-text"><span class="required">パスワード確認</span></label>
+    </div>
+    <div class="form-content">
+      <%= f.password_field :password_confirmation, class:"default-info", 
+      id:"password-confirm", placeholder:"例 :  パスワードを再度入力して下さい" %>
+    </div>
   </div>
+
+  <div class="form-item">
+    <div class="form-text-wrap">
+      <label class="form-text"><span class="required">お名前(全角)</span></label>
+    </div>
+    <div class="form-content">
+      <%= f.text_field :last_name, class:"default-info", 
+      id:"last-name", placeholder:"例 :  鈴木" %>
+      <%= f.text_field :first_name, class:"default-info", 
+      id:"first-name", placeholder:"例 :  一郎" %>
+    </div>
+  </div>
+
+  <div class="form-item">
+    <div class="form-text-wrap">
+      <label class="form-text"><span class="required">生年月日</span></label>
+    </div>
+    <div class="input-birth-wrap">
+      <%= raw sprintf(
+                  f.date_select(
+                    :birthday,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 10),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+    </div>
+  </div>
+
+
+  <div class="register-btn">
+    <%= f.submit "会員登録", class:"register-color" %>
+  </div>
+
+</div>
+
 <% end %>
-
-<%= render "devise/shared/links" %>
