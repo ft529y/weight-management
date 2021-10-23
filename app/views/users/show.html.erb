@@ -1,1 +1,5 @@
-マイページ！！（仮）
+<%= render "shared/header" %>
+
+<% @weights.each do |weight| %>
+  <%= weight.weight%>
+<% end %>
