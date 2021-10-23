@@ -7,15 +7,22 @@
     <div class="main-top">
       <h3>自分の体重を入力して、記録に残そう！<h3>
     </div>
-    <div class="weight-wrap">
-      <p>体重を入力する</p>
-      <%= form_with model: @weight, url:weights_path , class: 'weight-new-main', local: true do |f| %>
-      <div class="new-weight-wrap">
-        <div class="weight-text">体重入力</div>
-        <%= f.text_field :weight, class:"new-field", id:"new-name",  placeholder:"体重を入力してください" %>
+
+    <% if user_signed_in? %>
+      <div class="weight-wrap">
+        <p>体重を入力する</p>
+        <%= form_with model: @weight, url:weights_path , class: 'weight-new-main', local: true do |f| %>
+        <div class="new-weight-wrap">
+          <div class="weight-text">体重入力</div>
+          <%= f.text_field :weight, class:"new-field", id:"new-name",  placeholder:"体重を入力してください" %>
+        </div>
+
+        <div class="weight-btn">
+          <%= f.submit "送信する", class:"post-btn" %>
+        </div>
+        <% end %>
       </div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
 </main>
 
