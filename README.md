@@ -16,11 +16,11 @@ has_many :weights
 
 ## weightsテーブル
 
-| Column               | Type    | Options                   |
-| -------------------- | ------- | --------------------------|
-| weight               | string  | null: false, unique: true |
-| height               | string  | null: false               |
-| user_id | references | null: false, foreign_key: true      |
+| Column               | Type       | Options                        |
+| -------------------- | ---------- | ------------------------------ |
+| weight               | string     | null: false                    |
+| height               | string     |                                |
+| user_id              | references | null: false, foreign_key: true |
 
 ### Association
 
