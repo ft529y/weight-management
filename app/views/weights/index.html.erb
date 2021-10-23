@@ -13,7 +13,7 @@
         <p>体重を入力する</p>
         <%= form_with model: @weight, url:weights_path , class: 'weight-new-main', local: true do |f| %>
         <div class="new-weight-wrap">
-          <div class="weight-text">体重入力</div>
+          <%# <div class="weight-text">体重入力</div> %>
           <%= f.text_field :weight, class:"new-field", id:"new-name",  placeholder:"体重を入力してください" %>
         </div>
 
