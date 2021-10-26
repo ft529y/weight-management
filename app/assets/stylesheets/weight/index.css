@@ -1,3 +1,11 @@
+.main-wrapper {
+  text-align: center;
+  background-color: blueviolet;
+}
+
+.main-top {
+  margin-top: 32px;
+}
 
 .weight-wrapper {
   display: flex;
@@ -6,28 +14,4 @@
 .weight-wrapper > h1 {
   font-size: 24px;
   background-color: aqua;
-}
-
-nav {
-  width: 100%;
-  height: 70px;
-  background-color: dimgray;
-  line-height: 70px;
-}
-
-ul {
-  display: flex;
-  justify-content: right;
-}
-
-nav > ul > li > a {
-  display: block;
-  color: white;
-  margin-right: 35px;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-nav > ul > li > a:hover {
-  color: rgb(214, 237, 248);
 }
