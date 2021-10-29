@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
 
-<% @weights.each do |weight| %>
-  <%= weight.weight%>
-<% end %>
+  <%= line_chart @weights.group_by_day(:created_at).sum(:weight) %>
+
+<%#= line_chart [['赤', 50], ['青', 50]]%>
