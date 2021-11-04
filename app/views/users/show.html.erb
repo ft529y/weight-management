@@ -10,12 +10,12 @@
 
 <div class="personal-info">
   <h3>アプリ登録時の情報<h3>
-  <p><%= @user.first_name %>さんの登録時の身長<p>
+  <p class="personal-data"><%= @user.first_name %>さんの登録時の身長<p>
   <%= @user.height %>cm
 
-  <p><%= @user.first_name %>さんの登録時の体重<p>
+  <p class="personal-data"><%= @user.first_name %>さんの登録時の体重<p>
   <%= @user.initial_weight %>kg
 
-  <p><%= @user.first_name %>さんの登録日<p>
+  <p class="personal-data"><%= @user.first_name %>さんの登録日<p>
   <%= @user.created_at %>
 </div>
