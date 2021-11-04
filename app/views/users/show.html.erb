@@ -1,7 +1,10 @@
 <%= render "shared/header" %>
 
-<div class="transition-text">
-  <h3><%= @user.first_name %>さんの体重遷移</h3>
+<div class="personal-weight">
+  <div class="transition-text">
+    <h3><%= @user.first_name %>さんの体重遷移</h3>
+  </div>
+
+    <%= line_chart @weights.group_by_day(:created_at, series: false).sum(:weight), curve: false, width: "80vw", height: "50vh", xtitle: "日付", ytitle: "kg", discreate: true %>
 </div>
 
-  <%= line_chart @weights.group_by_day(:created_at, series: false).sum(:weight), curve: false, width: "80vw", height: "50vh", xtitle: "日付", ytitle: "kg", discreate: true %>
