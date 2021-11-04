@@ -6,3 +6,12 @@
   font-size: 24px;
   margin: 16px 0;
 }
+
+.personal-info {
+  text-align: center;
+  padding-top: 32px;
+}
+
+.personal-data {
+  padding-top: 24px;
+}
