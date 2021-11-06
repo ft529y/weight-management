@@ -1,5 +1,21 @@
 <%= render "shared/header" %>
 
-<% @weights.each do |weight| %>
-  <%= weight.weight%>
-<% end %>
+<div class="personal-weight">
+  <div class="transition-text">
+    <h3><%= @user.first_name %>さんの体重遷移</h3>
+  </div>
+
+    <%= line_chart @weights.group_by_day(:created_at, series: false).sum(:weight), curve: false, width: "80vw", height: "50vh", xtitle: "日付", ytitle: "kg", discreate: true %>
+</div>
+
+<div class="personal-info">
+  <h3>アプリ登録時の情報<h3>
+  <p class="personal-data"><%= @user.first_name %>さんの登録時の身長<p>
+  <%= @user.height %>cm
+
+  <p class="personal-data"><%= @user.first_name %>さんの登録時の体重<p>
+  <%= @user.initial_weight %>kg
+
+  <p class="personal-data"><%= @user.first_name %>さんの登録日<p>
+  <%= @user.created_at %>
+</div>

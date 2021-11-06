@@ -1,6 +1,5 @@
 .main-wrapper {
   text-align: center;
-  background-color: blueviolet;
 }
 
 .main-top {
@@ -13,5 +12,8 @@
 
 .weight-wrapper > h1 {
   font-size: 24px;
-  background-color: aqua;
+}
+
+.new-field {
+  margin-bottom: 32px;
 }

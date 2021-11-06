@@ -55,6 +55,26 @@
 
   <div class="form-item">
     <div class="form-text-wrap">
+      <label class="form-text"><span class="required">身長</span></label>
+    </div>
+    <div class="form-content">
+      <%= f.text_field :height, class:"default-info", 
+      id:"height", placeholder:"170" %>
+    </div>
+  </div>
+
+  <div class="form-item">
+    <div class="form-text-wrap">
+      <label class="form-text"><span class="required">体重</span></label>
+    </div>
+    <div class="form-content">
+      <%= f.text_field :initial_weight, class:"default-info", 
+      id:"initial-weight", placeholder:"60" %>
+    </div>
+  </div>
+
+  <div class="form-item">
+    <div class="form-text-wrap">
       <label class="form-text"><span class="required">生年月日</span></label>
     </div>
     <div class="input-birth-wrap">
