@@ -26,3 +26,14 @@ has_many :weights
 ### Association
 
 belongs_to :user
+
+## mealsテーブル
+
+| Column               | Type       | Options                        |
+| -------------------- | ---------- | ------------------------------ |
+| eat_meal             | string     |                                |
+| user_id              | references | null: false, foreign_key: true |
+
+### Association
+
+belongs_to :user
