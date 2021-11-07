@@ -7,11 +7,30 @@
   margin: 16px 0;
 }
 
-.personal-info {
-  text-align: center;
-  padding-top: 32px;
+.personal-info-top {
+  font-size: 16px;
+  font-weight: bold;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.personal-data {
-  padding-top: 24px;
+.personal-info {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.personal-list {
+  width: 36%;
+  text-align: center;
+  background-color: burlywood;
+  border: 1px solid black;
+  padding: 24px;
+}
+
+.personal-content {
+  width: 64%;
+  text-align: center;
+  background-color: white;
+  border: 1px solid black;
+  padding: 24px;
 }
