@@ -8,14 +8,24 @@
     <%= line_chart @weights.group_by_day(:created_at, series: false).sum(:weight), curve: false, width: "80vw", height: "50vh", xtitle: "日付", ytitle: "kg", discreate: true %>
 </div>
 
-<div class="personal-info">
-  <h3>アプリ登録時の情報<h3>
-  <p class="personal-data"><%= @user.first_name %>さんの登録時の身長<p>
-  <%= @user.height %>cm
+  <p class="personal-info-top">アプリ登録時の情報</p>
+<table class="personal-info">
+  <tbody>
 
-  <p class="personal-data"><%= @user.first_name %>さんの登録時の体重<p>
-  <%= @user.initial_weight %>kg
+  <tr>
+    <th class="personal-list"><%= @user.first_name %>さんの登録時の身長</th>
+    <td class="personal-content"><%= @user.height %>kg</td>
+  </tr>
 
-  <p class="personal-data"><%= @user.first_name %>さんの登録日<p>
-  <%= @user.created_at %>
-</div>
+  <tr>
+    <th class="personal-list"><%= @user.first_name %>さんの登録時の体重</th>
+    <td class="personal-content"><%= @user.initial_weight %>kg</td>
+  </tr>
+
+  <tr>
+    <th class="personal-list"><%= @user.first_name %>さんのご登録日</th>
+    <td class="personal-content"><%= @user.created_at.strftime("%Y-%m-%d") %></td>
+  </tr>
+
+  </tbody>
+</table>
