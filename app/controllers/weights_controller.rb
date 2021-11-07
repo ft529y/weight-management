@@ -12,7 +12,6 @@ class WeightsController < ApplicationController
     end
   end
 
-
   private
 
   def weight_params
